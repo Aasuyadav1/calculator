@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+:root{
+    --black:black;
+    --sel-black:rgb(247, 247, 247);
+    --backgroung:rgb(65, 65, 65);
+}
+.whitetheme{
+    --black:white;
+    --sel-black:black;
+    --backgroung:rgb(168, 165, 165);
+}
+.blacktheme{
+    --black:black;
+    --sel-black:rgb(253, 250, 250);
+    --backgroung:rgb(49, 48, 48);
+}
+
+.redtheme{
+    --black: rgb(242, 97, 97);
+    --sel-black:rgb(239, 235, 235);
+    --backgroung:rgb(250, 57, 57);
+}
+
+.purpletheme{
+    --black:purple;
+    --sel-black:white;
+    --backgroung:rgb(199, 10, 199);
+}
+.bluetheme{
+    --black:rgb(73, 73, 227);
+    --sel-black:white;
+    --backgroung:rgb(20, 20, 248);
+}
+.pinktheme{
+    --black:rgb(208, 57, 82);
+    --sel-black:white;
+    --backgroung:rgb(244, 92, 117);
+}
+.greentheme{
+    --black:rgb(5, 248, 5);
+    --sel-black:black;
+    --backgroung:rgb(45, 244, 45);
+}
+.aquatheme{
+    --black:aqua;
+    --sel-black: black;
+    --backgroung:rgb(90, 249, 249);
+} 
+.yellowtheme{
+    --black:rgb(251, 251, 8);
+    --sel-black: black;
+    --backgroung:rgb(248, 248, 80);
+}
+body{
+    font-family: 'Roboto', sans-serif;
+
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+    color: var(--sel-black);
+    position: relative;
+}
+.calculator{
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+
+    height: 100%;
+    /* padding-bottom: 30px; */
+    position: relative;
+    transition: all 0.5s;
+    transform: scale(0);
+    overflow-x: hidden;
+}
+.btns{
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    user-select: none;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 60px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--sel-black);
+    color: var(--black);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.468);
+}
+button:hover{
+    transform: scale(1.04);
+}
+.row{
+    display: flex;
+    gap: 15px;
+}
+.displayl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+input{
+    width: 80%;
+    height: 80px;
+    padding: 10px;
+    text-align: right;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: end;
+    font-size: 2rem;
+    background-color: transparent;
+    color: var(--sel-black);
+}
+.zero {
+    width: 130px;
+    height: 60px;
+    border-radius: 100px;
+}
+.yellow2{
+    background-color:rgb(226, 73, 31) ;
+    color: white;
+}
+.yellow{
+    color: rgb(226, 73, 31);
+    font-weight: bold;
+}
+ .calculator .lol{
+    cursor: pointer;
+    position: absolute;
+    z-index: 4;
+    top:  0;
+    right: 20px;
+    font-size: 2rem;
+    margin-top: 5px;
+    color: var(--sel-black);
+  
+}
+.nav{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color:var(--backgroung);
+    z-index: 3;
+    transform: translate(100%);
+    transition: all 0.5s;
+     display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid rgba(0, 0, 0, 0.473);
+}
+.no{
+    transform: translate(50%);
+}
+.clc{
+   width: 10px;
+   aspect-ratio: 0;
+   padding: 10px 150px;
+   border-radius: 0;
+   position: absolute;
+}
+
+.nav ul{
+    position: absolute;
+    left: 10px;
+    top: 100px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 45%;
+}
+ul li{
+    color: var(--sel-black);
+    padding: 5px ;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+ul li:hover{
+    opacity: 0.9;
+}
+.history{
+    width: 100%;
+    background-color: var(--backgroung);
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+    display: none;
+    color: var(--sel-black);
+    transition: all 1s;
+    
+}
+.history h1{
+    text-align: center;
+    color: var(--sel-black);
+    margin-top: 50px;
+
+}
+@media (max-width:340px) {
+    .history h1{
+        margin-top: 0;
+    }
+    .history .colors{
+        margin-top: 7px;
+    }
+}
+.colors{
+    margin-top: 30px;
+   display: flex;
+   justify-content: center;
+   align-self: center;
+   gap: 10px;
+   flex-wrap: wrap;
+}
+.colors .col{
+    
+    border-radius: 10px;
+    width: 100px;
+    aspect-ratio: 1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(63, 63, 63);
+    font-weight: 550;
+}
+#red{
+    background-color: red;
+    color: white;
+}
+#black{
+    background-color: black;
+    color: white;
+}
+#purple{
+    background-color: purple;
+    color: white;
+    font-size: 0.9rem;
+}
+#blue{
+    background-color: blue;
+    color: white;
+}
+#pink{
+    background-color: rgb(221, 107, 126);
+    color: white;
+}
+#green{
+    background-color: rgb(73, 235, 73);
+    color: black;
+}
+#aqua{
+    background-color: aqua;
+    color: black;
+}
+#yellow{
+    background-color: yellow;
+    color: black;
+    font-size: 0.9rem;
+}
+.history i{
+    color: var(--sel-black);
+    font-size: 3rem;
+    margin: 20px 10px;
+    cursor: pointer;
+}
+.historydis{
+    height: 100%;
+    width: 100%;
+    background-color: var(--backgroung);
+    position: absolute;
+    z-index: 100000;
+    color: white;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.iml{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+}
+img{
+    width: 150px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: all 0.4s;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.804);
+    background-color: transparent;
+    border-radius: 5px;
+    
+}
+
+img:hover{
+    transform: scale(1.1);
+}

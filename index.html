@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+   
+    <div class="container">
+       <div class="iml">
+        <img src="171352_calculator_icon.png" alt="" id="image">
+       </div>
+        <div class="calculator" id="calculator">
+            
+            <i class="ri-menu-3-line lol" id="icon"></i>
+            <div class="displayl">
+                <input type="text"  id="display" class="display" name="display">
+            </div>
+            <div class="btns">
+            <div class="row">
+                <button value="c"  onclick="display.value = ''">C</button>
+                <button value="DE" onclick="display.value = display.value.toString().slice(0,-1)" >DE</button>
+                <button value="00" onclick="display.value += '00'">00</button>
+                <button value="/" class="yellow" onclick="display.value += '/'">/</button>
+            </div>
+            <div class="row">
+                <button value="7" onclick="display.value += '7'">7</button>
+                <button value="8" onclick="display.value += '8'">8</button>
+                <button value="9" onclick="display.value += '9'">9</button>
+                <button value="*" class="yellow" onclick="display.value += '*'">X</button>
+            </div>
+            <div class="row">
+                <button value="6" onclick="display.value += '4'">4</button>
+                <button value="5" onclick="display.value += '5'">5</button>
+                <button value="6" onclick="display.value += '6'">6</button>
+                <button value="-" class="yellow" onclick="display.value += '-'">-</button>
+            </div>
+            <div class="row">
+                <button value="1" onclick="display.value += '1'">1</button>
+                <button value="2" onclick="display.value += '2'">2</button>
+                <button value="3" onclick="display.value += '3'">3</button>
+                <button value="+" class="yellow" onclick="display.value += '+'">+</button>
+            </div>
+            <div class="row">
+                <button value="0"  onclick="display.value += '0'">0</button>
+                <button value="." onclick="display.value += '.'">.</button>
+                <button value="=" class="zero yellow2" onclick="display.value = eval(display.value)">=</button>
+            </div>
+          </div>
+                <div class="nav" id="nav">
+                    <ul id="list">
+                      <li id="theme"> theme </li>
+                  
+                      <li id="close">close </li>
+                    </ul>
+                </div>
+                <div class="history" id="dis-his">
+                    <i class="ri-arrow-left-fill" id="left-arrow"></i>
+                    <h1>select the theme</h1>
+                    <div class="colors">
+                        <div class="col" id="white">white theme</div>
+                        <div class="col" id="black">black theme</div>
+                        <div class="col" id="red">red theme</div>
+                        <div class="col" id="purple">purple theme</div>
+                        <div class="col" id="blue">blue theme</div>
+                        <div class="col" id="pink">pink theme</div>
+                        <div class="col" id="green">green theme</div>
+                        <div class="col" id="aqua">aqua theme</div>
+                        <div class="col" id="yellow">yellow theme</div>
+                    </div>
+                </div>
+               
+        </div>
+       
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
