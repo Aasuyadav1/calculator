@@ -1,3 +1,3 @@
-# calcultor
+# calculator
 calculator using html css and javascript
 live - https://calculator-apy.netlify.app/
